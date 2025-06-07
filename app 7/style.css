@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+#timer {
+  font-size: 48px;
+  margin: 20px 0;
+}
+#videoTitle {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+  max-width: 640px; /* プレイヤーの幅に合わせる */
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word; /* 長いタイトルを折り返す */
+}
+input, button {
+  padding: 10px;
+  margin: 5px;
+}
+#player {
+  margin: 20px auto;
+}
+#searchResults, #playlistResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.video-item, .playlist-item {
+  cursor: pointer;
+  max-width: 150px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: white;
+}
+.video-item img Emscripten {
+  width: 100%;
+  border-radius: 5px;
+}
+.video-item img, .playlist-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+.video-item p, .playlist-item p {
+  font-size: 12px;
+  margin: 3px 0;
+}
+button#randomSearchButton {
+  background-color: #ff6f61; /* ランダム検索ボタンの色 */
+  color: white;
+}
+button#randomSearchButton:hover {
+  background-color: #ff4f41;
+}
+button#playlistSearchButton {
+  background-color: #4a90e2; /* プレイリスト検索ボタンの色 */
+  color: white;
+}
+button#playlistSearchButton:hover {
+  background-color: #357abd;
+}
+button#nextButton, button#prevButton {
+  background-color: #6c757d; /* 次/前ボタンの色 */
+  color: white;
+}
+button#nextButton:hover, button#prevButton:hover {
+  background-color: #5a6268;
+}
