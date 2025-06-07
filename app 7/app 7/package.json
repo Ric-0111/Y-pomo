@@ -1,0 +1,12 @@
+{
+  "name": "youtube-pomodoro",
+  "version": "1.0.0",
+  "description": "YouTube検索ポモドーロタイマー",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

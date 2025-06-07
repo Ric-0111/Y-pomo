@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTubeポモドーロ</title>
+  <link rel="stylesheet" href="/style.css"> </head>
+<body>
+  <h1>YouTubeポモドーロ</h1>
+  <input type="text" id="searchQuery" placeholder="動画またはプレイリストを検索">
+  <button id="searchButton">動画検索</button>
+  <button id="playlistSearchButton">プレイリスト検索</button>
+  <button id="randomSearchButton">ランダム動画検索</button>
+  <div id="searchResults"></div>
+  <div id="playlistResults"></div>
+  <div id="player"></div>
+  <div id="videoTitle"></div>
+  <div id="timer">25:00</div>
+  <button id="startButton">開始</button>
+  <button id="resetButton">リセット</button>
+  <button id="nextButton">次の動画</button> <button id="prevButton">前の動画</button> <script src="/script.js" onload="console.log('script.jsが読み込まれました')" onerror="console.error('script.jsの読み込みに失敗しました')"></script> <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
