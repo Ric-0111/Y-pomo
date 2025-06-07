@@ -16,26 +16,21 @@ let player;
 let isWorkTime = true;
 let timeLeft = 25 * 60; // 25分
 let timerInterval;
-let apiKey;
+
+// ★ここにあなたのYouTube APIキーを直接入力してください★
+// 例: let apiKey = 'AIzaSyC_xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+// **警告: これは公開されるため、セキュリティリスクがあります！**
+let apiKey = 'AIzaSyBkFfZSfeaCnP39CBIvthm2RhzI534wrEA'; 
+
 let searchResults = []; // 検索結果（動画またはプレイリストの動画）を保持
 let currentVideoIndex = -1; // 現在の動画のインデックス
 let isPlaylistMode = false; // プレイリストモードかどうか
 
-// APIキーをサーバーから取得
-async function loadApiKey() {
-  try {
-    const response = await fetch('/api/config');
-    const config = await response.json();
-    apiKey = config.youtubeApiKey;
-    console.log('APIキー:', apiKey);
-  } catch (error) {
-    console.error('APIキー取得エラー:', error);
-    alert('APIキーの取得に失敗しました');
-  }
-}
+// APIキーをサーバーから取得する関数は不要になるので削除します
+// async function loadApiKey() { /* ... */ }
 
-// ページ読み込み時にAPIキーを取得
-loadApiKey();
+// ページ読み込み時にAPIキーを取得する呼び出しも不要になります
+// loadApiKey();
 
 // YouTube IFrame APIの読み込み
 function onYouTubeIframeAPIReady() {
@@ -112,8 +107,8 @@ function shuffleArray(array) {
 // 動画検索
 async function searchVideos(isRandom) {
   console.log(isRandom ? 'ランダム動画検索が呼び出されました' : '動画検索が呼び出されました');
-  if (!apiKey) {
-    alert('APIキーが取得できていません。ページをリロードしてください。');
+  if (!apiKey || apiKey === 'YOUR_YOUTUBE_API_KEY_HERE') {
+    alert('APIキーが設定されていません。script.jsを確認してください。');
     return;
   }
 
@@ -157,8 +152,8 @@ async function searchVideos(isRandom) {
 // プレイリスト検索
 async function searchPlaylists() {
   console.log('プレイリスト検索が呼び出されました');
-  if (!apiKey) {
-    alert('APIキーが取得できていません。ページをリロードしてください。');
+  if (!apiKey || apiKey === 'YOUR_YOUTUBE_API_KEY_HERE') {
+    alert('APIキーが設定されていません。script.jsを確認してください。');
     return;
   }
 
